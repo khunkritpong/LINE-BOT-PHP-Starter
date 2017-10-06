@@ -65,6 +65,12 @@ else if($arrJson['events'][0]['message']['text'] == "อีห่า"){
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ตบปาก";
 }
+else if($arrJson['events'][0]['message']['text'] == "ลูกทาส"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "หัวแบน หัวผัก นู๋เร่";
+}
  
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
