@@ -35,7 +35,36 @@ else if($arrJson['events'][0]['message']['text'] == "สั่งของ"){
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "สีไหนว่ามา";
 }
- 
+else if($arrJson['events'][0]['message']['text'] == "แม่จ่อย"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "มีอะไรว่ามา";
+}
+else if($arrJson['events'][0]['message']['text'] == "มีเรื่องจิเม้าท์"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "เม้าท์มา";
+}
+else if($arrJson['events'][0]['message']['text'] == "หนาวเหน็บ"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "ก็ห่มผ้าสิ";
+}
+else if($arrJson['events'][0]['message']['text'] == "ง่วง"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "ก็ไปนอนสิ";
+}
+else if($arrJson['events'][0]['message']['text'] == "อีห่า"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "ตบปาก";
+}
  
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
